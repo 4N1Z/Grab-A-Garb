@@ -1,4 +1,4 @@
-name: myapp
+name: smart_bin
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -37,6 +37,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   qr_code_scanner: ^1.0.1
+  firebase_auth: ^4.3.0
+  google_sign_in: ^6.0.2
+  firebase_core: ^2.9.0
 
 dev_dependencies:
   flutter_test:
@@ -63,8 +66,12 @@ flutter:
   assets:
     - assets/map_style.json
     - assets/bin.png
-    - assets/bin1.png
     - assets/google.png
+    - assets/qr.png
+    - assets/logo.png
+    - assets/icon.png
+    - assets/icon2.png
+    - assets/iconB.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

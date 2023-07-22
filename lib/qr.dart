@@ -5,6 +5,7 @@ class QRScreen extends StatefulWidget {
   const QRScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _QRScreenState createState() => _QRScreenState();
 }
 
@@ -22,7 +23,8 @@ class _QRScreenState extends State<QRScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('QR Code Scanner'),
+        title: const Text('SmartBin QR'),
+        backgroundColor: Colors.black,
       ),
       body: QRView(
         key: qrKey,
@@ -34,7 +36,6 @@ class _QRScreenState extends State<QRScreen> {
   void _onQRViewCreated(QRViewController controller) {
     this.controller = controller;
     controller.scannedDataStream.listen((scanData) {
-      // Do something with the scan data
       Navigator.pop(context, scanData.code);
     });
   }
